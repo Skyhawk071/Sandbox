@@ -1,0 +1,187 @@
+Introduction
+
+When it comes to version control systems, there are very few out there that can outshine GIT in relevance, performance and prevalence. GIT was developed by Linus Torvalds in 2005 and today, millions of companies use it for efficient code management and version control of their projects. The open-source software can be downloaded for Linux, Windows, Solaris and Mac platforms; more information about GIT basics can be retrieved here. In this tutorial, the most basic git commands will be talked about.
+What you’ll need
+
+Before you begin this guide, you’ll need the following:
+
+    GIT installed on your system
+
+Basic GIT Commands
+
+    git config
+    One of the most used git commands is git config which can be used to set user-specific configuration values like email, preferred algorithm for diff, username and file format etc. For example, the following command can be used to set the email:
+
+    git config --global user.email sam@google.com
+
+    git init
+    This command is used to create a new GIT repository. Usage:
+
+    git init
+
+    git add
+    The git add command can be used in order to add files to the index. For example, the following command will add a file named temp.txt present in the local directory to the index:
+
+    git add temp.txt
+
+    git clone
+    The git clone command is used for repository checking out purposes.
+    If the repository lies on a remote server, use:
+
+    git clone alex@93.188.160.58:/path/to/repository
+
+    Conversely, if a working copy of a local repository is to be created, use:
+
+    git clone /path/to/repository
+
+    git commit
+    The git commit command is used to commit the changes to the head. Note that any committed changes won’t make their way to the remote repository. Usage:
+
+    git commit –m “Message to go with the commit here”
+
+    git status
+    The git status command displays the list of changed files along with the files that are yet to be added or committed. Usage:
+
+    git status
+
+    git push
+    git push is another one of the most used basic git commands. A simple push sends the made changes to the master branch of the remote repository associated with the working directory. For example:
+
+    git push origin master
+
+    git checkout
+    The git checkout command can be used to create branches or to switch between them. For example, the following creates a new branch and switches to it:
+
+    command git checkout -b <branch-name> 
+
+    To simply switch from one branch to another use:
+
+    git checkout <branch-name> 
+
+    git remote
+    The git remote command lets a user connect to a remote repository. The following command lists the remote repositories that are currently configured:
+
+    git remote –v
+
+    This command allows the user to connect the local repository to a remote server:
+
+    git remote add origin <93.188.160.58>
+
+    git branch
+    The git branch command can be used to list, create or delete branches. To list all the branches present in the repository use:
+
+    git branch
+
+    To delete a branch:
+
+    git branch –d <branch-name>
+
+    git pull
+    In order to merge all the changes present on the remote repository to the local working directory, the pull command is used. Usage:
+
+    git pull
+
+    git merge
+    The git merge command is used to merge a branch into the active branch. Usage:
+
+    git merge <branch-name>
+
+    git diff
+    The git diff command is used to list down conflicts. In order to view conflicts with the base file, use
+
+    git diff --base <file-name>
+
+    The following command is used to view the conflicts between about-to-be-merged branches prior to merging them:
+
+    git diff <source-branch> <target-branch>
+
+    To simply list down all the present conflicts, use:
+
+    git diff
+
+    git tag
+    Tagging is used to mark specific commits with simple handles. An example can be:
+
+    git tag 1.1.0 <insert-commitID-here>
+
+    git log
+    Running the git log command outputs a list of commits on a branch along with pertinent details. A sample output can be:
+
+    commit 15f4b6c44b3c8344caasdac9e4be13246e21sadw
+    Author: Alex Hunter <alexh@gmail.com>
+    Date:   Mon Oct 1 12:56:29 2016 -0600
+
+    git reset
+    To reset the index and the working directory to the last commit’s state, git reset command is used. Usage:
+
+    git reset --hard HEAD
+
+    git rm
+    git rm can be used to remove files from the index and the working directory. Usage:
+
+    git rm filename.txt
+
+    git stash
+    Probably one of the lesser-known basic git commands is git stash which helps in saving changes that are not to be committed immediately, but on a temporary basis. Usage:
+
+    git stash
+
+    git show
+    In order to view information about any git object, use the git show command. For example:
+
+    git show
+
+    git fetch
+    git fetch allows a user to fetch all those objects from the remote repository that doesn’t currently reside in the local working directory. Example usage:
+
+    git fetch origin
+
+    git ls-tree
+    To view a tree object along with the name and mode of each item, and the blob’s SHA-1 value, use the git ls-tree command. For example:
+
+    git ls-tree HEAD
+
+    git cat-file
+    Using the SHA-1 value, view the type of an object by using the git cat-file command. For example:
+
+    git cat-file –p d670460b4b4aece5915caf5c68d12f560a9fe3e4
+
+    git grep
+    git grep lets a user search through the content trees for phrases and/or words. For example, to search for www.hostinger.com in all files use:
+
+    git grep "www.hostinger.com"
+
+    gitk
+    gitk is the graphical interface for a local repository that can be invoked by typing and running:
+
+    gitk
+
+    git instaweb
+    With the git instaweb command, a web server can be run interfaced with the local repository. A web browser is also automatically directed to it. For instance:
+
+    git instaweb –httpd=webrick
+
+    git gc
+    To optimize the repository via garbage collection, which will cleanup unneeded files and optimize them, use:
+
+    git gc
+
+    git archive
+    The git archive command lets a user create a zip or a tar file containing the constituents of a single repository tree. For instance:
+
+    git archive --format=tar master
+
+    git prune
+    Via the git prune command, objects that don’t have any incoming pointers are deleted. Usage:
+
+    git prune
+
+    git fsck
+    In order to perform an integrity check of the git file system, use the command git fsck. Any corrupted objects are identified:
+
+    git fsck
+
+    git rebase
+    The git rebase command is used for reapplication of commits on another branch. For instance:
+
+    git rebase master
