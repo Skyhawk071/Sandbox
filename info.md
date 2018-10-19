@@ -19,3 +19,4 @@
 - First comment here
 - Second here
 
+- New major changes
