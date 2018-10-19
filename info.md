@@ -20,3 +20,4 @@
 - Second here
 
 - New major changes
+- Minimal modification
