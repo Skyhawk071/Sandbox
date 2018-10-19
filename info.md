@@ -9,9 +9,6 @@
 * Fourth update from MacBook Pro
 ---
 * Update again from PC
-<<<<<<< HEAD
 * Update from GitHub Desktop
-=======
----
-- Update from MacBook Pro
->>>>>>> bb176b294b0c0699fcf4461779e3bf16251f261a
+* Update from MacBook Pro
+* Update from PC
