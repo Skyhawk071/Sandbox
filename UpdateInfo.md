@@ -24,5 +24,7 @@
 ---
 * Versiom 21
 	--- Update from MacBook Pro
-* Version 21
+* Version 22
+	--- Update from Win
+* Version 23
 	--- Update from Win
