@@ -23,4 +23,6 @@
 * Version 20
 ---
 * Versiom 21
-	--- UPdate from MacBook Pro
+	--- Update from MacBook Pro
+* Version 21
+	--- Update from Win
